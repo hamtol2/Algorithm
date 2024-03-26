@@ -2,11 +2,6 @@
 
 public class Program
 {
-    public enum Result
-    {
-        Success, Fail
-    }
-
     // 팩토리얼을 구하는 재귀 함수.
     static int Factorial(int number)
     {
@@ -54,6 +49,16 @@ public class Program
         count++;
         // 왼쪽 반만 탐색.
         return BinarySearch(array, searchTarget, low, mid - 1, ref count);
+    }
+
+    static void RecursiveFunction(int n)
+    {
+        if (n == 0)
+        {
+            return;
+        }
+
+        RecursiveFunction(n - 1);
     }
 
     // args -> arguments (인자들, 요소들).
